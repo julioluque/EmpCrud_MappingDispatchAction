@@ -1,0 +1,32 @@
+<!DOCTYPE struts-config PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+	"http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+	<form-beans>
+		<form-bean name="RF" type="beans.RegForm" />
+	</form-beans>
+
+	<global-forwards>
+		<forward name="succes" path="/success.jsp"></forward>
+		<forward name="fail" path="/fail.jsp"></forward>
+	</global-forwards>
+
+	<!-- Form to validator -->
+	<action-mappings>
+		<action path="/empsave" name="RF" input="/index.jsp" type="controller.RegController" parameter="employeeSave">
+		</action>
+		
+		<action path="/empupdate" name="RF" input="/index.jsp" type="controller.RegController" parameter="employeeUpdate">
+		</action>
+
+		<action path="/locale" type="controller.LangChangeController" parameter="submit">
+			<forward name="samepage" path="/index.jsp" />
+		</action>
+
+	</action-mappings>
+
+	<message-resources parameter="resources/Messages"></message-resources>
+
+</struts-config>
