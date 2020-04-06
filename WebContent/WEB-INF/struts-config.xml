@@ -15,10 +15,10 @@
 
 	<!-- Form to validator -->
 	<action-mappings>
-		<action path="/empsave" name="RF" input="/index.jsp" type="controller.RegController" parameter="employeeSave">
+		<action path="/empsave" name="RF" input="/empsave.jsp" type="controller.RegController" parameter="employeeSave">
 		</action>
 		
-		<action path="/empupdate" name="RF" input="/index.jsp" type="controller.RegController" parameter="employeeUpdate">
+		<action path="/empupdate" name="RF" input="/empupdate.jsp" type="controller.RegController" parameter="employeeUpdate">
 		</action>
 
 		<action path="/locale" type="controller.LangChangeController" parameter="submit">
