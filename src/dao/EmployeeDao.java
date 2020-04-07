@@ -9,8 +9,9 @@ public class EmployeeDao {
 	public int save(int id, String name, String email, float salary) throws Exception {
 
 		Class.forName("oracle.jdbc.OracleDriver");
-		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/XEPDB", "system", "password");
-		
+//		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@//localhost:1521/XEPDB", "system", "password");
+		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1522:orcl", "system", "delfina");
+
 		PreparedStatement ps = con.prepareStatement("insert into employee values(?,?,?,?)");
 		ps.setInt(1, id);
 		ps.setString(2, name);
