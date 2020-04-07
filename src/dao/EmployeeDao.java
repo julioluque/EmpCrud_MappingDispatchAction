@@ -24,7 +24,7 @@ public class EmployeeDao {
 
 		Class.forName("oracle.jdbc.OracleDriver");
 		Connection con = DriverManager.getConnection("jdbc:oracle:thin:@localhost:1522:orcl", "system", "delfina");
-		PreparedStatement ps = con.prepareStatement("update employee set name=?, email=?, salary=?, where id=?");
+		PreparedStatement ps = con.prepareStatement("update employee set name=?, email=?, salary=? where id=?");
 		ps.setString(1, name);
 		ps.setString(2, email);
 		ps.setFloat(3, salary);

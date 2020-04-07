@@ -9,7 +9,7 @@
 	</form-beans>
 
 	<global-forwards>
-		<forward name="succes" path="/success.jsp"></forward>
+		<forward name="success" path="/success.jsp"></forward>
 		<forward name="fail" path="/fail.jsp"></forward>
 	</global-forwards>
 
